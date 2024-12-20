@@ -1,14 +1,11 @@
-package com.leiyi.elasticsearchmanager;
+package start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ElasticsearchManagerApplication {
-
+public class ServiceApplication {
     public static void main(String[] args) {
-
-        SpringApplication.run(ElasticsearchManagerApplication.class, args);
+        SpringApplication.run(ServiceApplication.class, args);
     }
-
 }
