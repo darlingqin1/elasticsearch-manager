@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ElasticsearchManagerApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(ElasticsearchManagerApplication.class, args);
     }
 
