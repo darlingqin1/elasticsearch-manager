@@ -29,6 +29,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -45,7 +46,14 @@
                 <scope>import</scope>
             </dependency>
 
-
+            <!-- Spring Cloud BOM -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2021.0.7</version> <!-- 选择合适的 BOM 版本 -->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -58,25 +66,29 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>2021.0.4.0</version> <!-- 最新稳定版 -->
             </dependency>
+
+
+
         </dependencies>
+
 
     </dependencyManagement>
 
 
+    <!-- Maven 项目的仓库列表 -->
     <repositories>
-        <!-- 阿里云中央仓库 -->
+        <!-- Maven 中央仓库的配置 -->
         <repository>
-            <id>aliyun-central</id>
-            <url>https://maven.aliyun.com/repository/central</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+            <layout>default</layout>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
         </repository>
     </repositories>
+
 
     <build>
         <plugins>
